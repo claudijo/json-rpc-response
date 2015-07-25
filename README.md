@@ -1,6 +1,6 @@
-# JSON RPC 2.0 response object constructor.
+# JSON RPC 2.0 Response
 
-Simple constructor for JSON RPC 2.0 response objects.
+Constructor for JSON RPC 2.0 response objects.
 
 ## Installation
 
