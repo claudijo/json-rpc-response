@@ -1,4 +1,4 @@
-var JsonRpcResponse = function(error, result, id) {
+var JsonRpcResponse = function(id, error, result) {
   if (!(this instanceof JsonRpcResponse)) {
     return new JsonRpcResponse(error, result, id);
   }
@@ -12,11 +12,14 @@ var JsonRpcResponse = function(error, result, id) {
   }
 
   this.jsonrpc = '2.0';
-  this.result = result;
   this.id = id;
 
-  if (error) {
+  if (typeof result !== 'undefined') {
+    this.result = result;
+  } else if (error) {
     this.error = error;
+  } else {
+    throw new Error('Invalid response');
   }
 };
 
