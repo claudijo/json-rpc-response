@@ -70,11 +70,11 @@ describe('JSON RPC 2.0 response', function() {
     assert(invalidResponseError);
   });
 
-  it('should throw if not passing a sting or a number as id', function() {
+  it('should throw if not passing a string or a number as id', function() {
     var invalidResponseError;
 
     try {
-      new JsonRpcResponse(null, null, result);
+      new JsonRpcResponse(true, null, result);
     } catch (err) {
       invalidResponseError = err;
     }
