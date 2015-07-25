@@ -1,0 +1,34 @@
+{
+  "name": "json-rpc-respone",
+  "version": "1.0.0",
+  "description": "JSON RPC 2.0 response object constructor.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --check-leaks --reporter spec --bail --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudijo/json-rpc-response.git"
+  },
+  "keywords": [
+    "json",
+    "rpc",
+    "response"
+  ],
+  "author": "Claudijo Borovic <hello@claudijo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/claudijo/json-rpc-response/issues"
+  },
+  "homepage": "https://github.com/claudijo/json-rpc-response#readme",
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "files": [
+    "LICENSE",
+    "index.js"
+  ]
+}
