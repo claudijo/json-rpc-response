@@ -26,10 +26,10 @@ undefined if passing `error`. Pass `null` as error if `result` exists.
 var JsonRpcResponse = require('json-rpc-response');
 
 // Result response
-new JsonRpcResponse('1', null, 'some result');
+new JsonRpcResponse(1, null, 'some result');
 
 // Error response
-new JsonRpcResponse('2', { code: -1, message: 'some error' });
+new JsonRpcResponse(1, { code: -1, message: 'some error' });
 ```
 
 ## Test
