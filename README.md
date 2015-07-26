@@ -10,14 +10,20 @@ npm install json-rpc-response
 
 ## Usage
 
+```js
+new JsonRpcResponse(id, error, result);
+```
+
 Response objects can be constructed with or without using the `new` keyword.
+Arguments error and result are mutually exclusive. Result must be undefined if
+passing an error. Pass null as error if result exists.
 
 ```js
 var JsonRpcResponse = require('json-rpc-response');
 
 // Simple response
-var response = new JsonRpcResponse(null, 'some response', '1');
+var response = new JsonRpcResponse('1', null, 'some result');
 
 // Error response
-var errorResponse = new JsonRpcResponse({ code: -1, message: 'some error' }, null, '2');
+var errorResponse = new JsonRpcResponse('2', { code: -1, message: 'some error' });
 ```
