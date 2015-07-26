@@ -29,3 +29,13 @@ var response = new JsonRpcResponse('1', null, 'some result');
 // Error response
 var errorResponse = new JsonRpcResponse('2', { code: -1, message: 'some error' });
 ```
+
+## Test
+
+Run unit tests;
+
+`$ npm test`
+
+# License
+
+[MIT](LICENSE)
