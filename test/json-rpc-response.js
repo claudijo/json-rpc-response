@@ -25,21 +25,6 @@ describe('JSON RPC 2.0 response', function() {
     assert(res.jsonrpc === '2.0');
   });
 
-  it('should create response with a result', function() {
-    var res = new JsonRpcResponse(id, null, result);
-    assert(res.result === result);
-  });
-
-  it('should create response with an id', function() {
-    var res = new JsonRpcResponse(id, null, result);
-    assert(res.id === id);
-  });
-
-  it('should create a response with undefined error if passing null as error', function() {
-    var res = new JsonRpcResponse(id, null, result);
-    assert(typeof res.error === 'undefined');
-  });
-
   it('should create response with error', function() {
     var res = new JsonRpcResponse(id, error);
     assert(res.error === error);
