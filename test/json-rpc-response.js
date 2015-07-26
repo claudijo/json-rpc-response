@@ -31,7 +31,7 @@ describe('JSON RPC 2.0 response', function() {
   });
 
   it('should throw if error lacks number code property', function() {
-    var responseError = {};
+    var responseError;
 
     try {
       new JsonRpcResponse(id, { message: 'some message'} );
@@ -43,7 +43,7 @@ describe('JSON RPC 2.0 response', function() {
   });
 
   it('should throw if error lacks string message property', function() {
-    var responseError = {};
+    var responseError;
 
     try {
       new JsonRpcResponse(id, { code: -1} );
@@ -60,7 +60,7 @@ describe('JSON RPC 2.0 response', function() {
   });
 
   it('should throw if passing both error and result arguments', function() {
-    var responseError = {};
+    var responseError;
 
     try {
       new JsonRpcResponse(id, error, result);
@@ -72,7 +72,7 @@ describe('JSON RPC 2.0 response', function() {
   });
 
   it('should throw if not passing an error nor a result', function() {
-    var responseError = {};
+    var responseError;
 
     try {
       new JsonRpcResponse(id, null);
@@ -84,7 +84,7 @@ describe('JSON RPC 2.0 response', function() {
   });
 
   it('should throw if not passing a string or a number as id', function() {
-    var responseError = {};
+    var responseError;
 
     try {
       new JsonRpcResponse(true, null, result);
