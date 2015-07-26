@@ -1,5 +1,5 @@
 {
-  "name": "json-rpc-respone",
+  "name": "json-rpc-response",
   "version": "1.0.0",
   "description": "JSON RPC 2.0 response object constructor.",
   "main": "index.js",
