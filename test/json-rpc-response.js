@@ -105,6 +105,4 @@ describe('JSON RPC 2.0 response', function() {
 
     assert(responseError);
   });
-
-
 });
