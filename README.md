@@ -20,6 +20,8 @@ Response objects can be constructed with or without using the `new` keyword.
 Arguments `error` and `result` are mutually exclusive. Argument `result` must be
 undefined if passing `error`. Pass `null` as error if `result` exists.
 
+### Example
+
 ```js
 var JsonRpcResponse = require('json-rpc-response');
 
