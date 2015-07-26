@@ -25,7 +25,7 @@ undefined if passing `error`. Pass `null` as error if `result` exists.
 ```js
 var JsonRpcResponse = require('json-rpc-response');
 
-// Simple response
+// Result response
 var response = new JsonRpcResponse('1', null, 'some result');
 
 // Error response
