@@ -8,12 +8,16 @@ var id = 1;
 describe('JSON RPC 2.0 response', function() {
   it('should create response using the `new` keyword', function() {
     var res = new JsonRpcResponse(id, null, result);
-    assert(res);
+    assert(res.id === id);
+    assert(res.error === undefined);
+    assert(res.result === result);
   });
 
   it('should create response without using the `new` keyword', function() {
-    var res = new JsonRpcResponse(id, null, result);
-    assert(res instanceof JsonRpcResponse);
+    var res = JsonRpcResponse(id, null, result);
+    assert(res.id === id);
+    assert(res.error === undefined);
+    assert(res.result === result);
   });
 
   it('should create response with correct version', function() {

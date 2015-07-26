@@ -1,6 +1,6 @@
 var JsonRpcResponse = function(id, error, result) {
   if (!(this instanceof JsonRpcResponse)) {
-    return new JsonRpcResponse(error, result, id);
+    return new JsonRpcResponse(id, error, result);
   }
 
   if (error && result) {
