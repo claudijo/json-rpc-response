@@ -16,9 +16,8 @@ new JsonRpcResponse(id, error, result);
 ```
 
 Response objects can be constructed with or without using the `new` keyword.
-Arguments `error` and `result` are mutually exclusive.
 
-Argument `result` must be
+Arguments `error` and `result` are mutually exclusive. Argument `result` must be
 undefined if passing `error`. Pass `null` as error if `result` exists.
 
 ```js
