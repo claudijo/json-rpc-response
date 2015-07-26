@@ -1,6 +1,4 @@
 var JsonRpcResponse = function(id, error, result) {
-  var errorMessage = 'Invalid response';
-
   if (!(this instanceof JsonRpcResponse)) {
     return new JsonRpcResponse(error, result, id);
   }
@@ -31,8 +29,6 @@ var JsonRpcResponse = function(id, error, result) {
 
   this.jsonrpc = '2.0';
   this.id = id;
-
-
 };
 
 module.exports = JsonRpcResponse;
