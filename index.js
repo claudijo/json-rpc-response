@@ -7,7 +7,7 @@ var JsonRpcResponse = function(id, error, result) {
     throw new Error('Mutually exclusive error and result exist');
   }
 
-  if (typeof id !== 'string' && typeof id !== 'number') {
+  if (id !== null && typeof id !== 'string' && typeof id !== 'number') {
     throw new TypeError('Invalid id type ' + typeof id);
   }
 

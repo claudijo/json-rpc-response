@@ -83,7 +83,7 @@ describe('JSON RPC 2.0 response', function() {
     assert(responseError);
   });
 
-  it('should throw if not passing a string or a number as id', function() {
+  it('should throw if not passing null, string or number as id', function() {
     var responseError;
 
     try {
@@ -93,5 +93,41 @@ describe('JSON RPC 2.0 response', function() {
     }
 
     assert(responseError);
+  });
+
+  it('should not throw if not passing null as id', function() {
+    var responseError;
+
+    try {
+      new JsonRpcResponse(null, null, result);
+    } catch (err) {
+      responseError = err;
+    }
+
+    assert(!responseError);
+  });
+
+  it('should not throw if not passing string as id', function() {
+    var responseError;
+
+    try {
+      new JsonRpcResponse('1', null, result);
+    } catch (err) {
+      responseError = err;
+    }
+
+    assert(!responseError);
+  });
+
+  it('should not throw if not passing int as id', function() {
+    var responseError;
+
+    try {
+      new JsonRpcResponse(1, null, result);
+    } catch (err) {
+      responseError = err;
+    }
+
+    assert(!responseError);
   });
 });
