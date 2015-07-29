@@ -4,7 +4,7 @@ Constructor for
 [JSON RPC 2.0 response objects](http://www.jsonrpc.org/specification#response_object).
 
 Also see related packages [json-rpc-request](https://github.com/claudijo/json-rpc-request),
-[json-rpc-notification](https://github.com/claudijo/json-rpc-notifcation), and
+[json-rpc-notification](https://github.com/claudijo/json-rpc-notification), and
 [json-rpc-error](https://github.com/claudijo/json-rpc-error)
 
 ## Installation
